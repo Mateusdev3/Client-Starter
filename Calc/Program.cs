@@ -8,8 +8,8 @@ namespace DayzdaAlegria {
             string fileconfig = "Config.txt";
             if (File.Exists(fileconfig))
             {   
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
+               
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Foi encontrado um arquivo de configuração salvo deseja usalo? (y ou n)");
                 char select1 = char.Parse(Console.ReadLine());
                 if (select1 == 'y')
@@ -28,8 +28,8 @@ namespace DayzdaAlegria {
                 Obterdados();
             }
             static void Obterdados() {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
+                
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Insira o ip do servidor:");
                 string ip = Console.ReadLine();
                 Console.WriteLine("Insira a porta do servidor:");
@@ -39,7 +39,6 @@ namespace DayzdaAlegria {
                 Console.WriteLine("Insira o diretorio da pasta mods:");
                 string pastamods = Console.ReadLine();
                 string mods = Obtermods(pastamods);
-                Console.WriteLine(mods);
                 Console.WriteLine("Insira o caminho do executavel:");
                 string exe = Console.ReadLine();
                 Console.WriteLine("Deseja Salvar esses dados para acessar na proxima execussão? (y ou n)");
