@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayzdaAlegria", "Calc\DayzdaAlegria.csproj", "{2D8A0808-4639-4EC9-AFBE-678A626A8628}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dayz-Client-Starter", "Calc\Dayz-Client-Starter.csproj", "{2D8A0808-4639-4EC9-AFBE-678A626A8628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,7 +8,6 @@ namespace DayzdaAlegria {
             string fileconfig = "Config.txt";
             if (File.Exists(fileconfig))
             {   
-               
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Foi encontrado um arquivo de configuração salvo deseja usalo? (y ou n)");
                 char select1 = char.Parse(Console.ReadLine());
