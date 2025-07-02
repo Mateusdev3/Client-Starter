@@ -4,6 +4,7 @@ using System.IO;
 
 namespace DayzdaAlegria {
     class Program {
+       
         static void Main(string[] args) {
             string fileconfig = "Config.txt";
             if (File.Exists(fileconfig))
@@ -44,7 +45,7 @@ namespace DayzdaAlegria {
                 char select = char.Parse(Console.ReadLine());
                 if (select == 'y')
                 {
-                    Salvar(nick, mods, ip, porta, exe);
+                    Salvar(nick, pastamods, ip, porta, exe);
                 }
                 Abrirdayz(nick, mods, ip, porta, exe);
             }
@@ -76,8 +77,8 @@ namespace DayzdaAlegria {
                     Console.WriteLine("Erro ao abrir o game");
                 }
             }
-            static void Salvar(string nick, string mods, string ip, string porta, string exe) {
-                string[] linhas = { nick, mods, ip, porta, exe};
+            static void Salvar(string nick, string pastamods, string ip, string porta, string exe) {
+                string[] linhas = { nick, pastamods, ip, porta, exe};
                 string nome = "Config.txt";
                 File.WriteAllLines(nome, linhas);
                 Console.BackgroundColor = ConsoleColor.Green;
@@ -85,8 +86,10 @@ namespace DayzdaAlegria {
             }
             static (string, string, string, string, string) Carregar(string fileconfig) {
                 if (File.Exists(fileconfig)) { }
+                string listamod = string.Empty;
                 string[] linhas = File.ReadAllLines(fileconfig);
-                return (linhas[0], linhas[1], linhas[2], linhas[3], linhas[4]);
+                listamod = Obtermods(linhas[1]);
+                return (linhas[0], listamod, linhas[2], linhas[3], linhas[4]);
             }
         }
     }
